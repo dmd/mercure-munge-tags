@@ -20,7 +20,7 @@ def process_image(file, in_folder, out_folder):
     dcm_file_out = Path(out_folder) / file
 
     ds = pydicom.dcmread(dcm_file_in)
-    ds.AccessionNumber = f"9T{ds.StudyDate[2:]}{ds.StudyTime[:-2]}"
+    ds.AccessionNumber = f"9T{ds.StudyDate[2:]}{ds.StudyTime}"
     ds.save_as(dcm_file_out)
 
 
