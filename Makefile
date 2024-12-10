@@ -1,2 +1,5 @@
 build:
-	docker build . -t mercureimaging/mercure-testmodule:latest
+	docker build . -t dmd3eorg/mercure-munge-tags:latest
+
+push: build
+	docker push dmd3eorg/mercure-munge-tags
